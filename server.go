@@ -19,6 +19,8 @@ func main()	{
 	e.GET("/show", show)
 	e.POST("/save", save)
 
+	e.Static("/static", "static")
+
 	e.GET("/", func(c echo.Context) error {
 		return c.String(http.StatusOK, "Hello, World!!")
 	})
